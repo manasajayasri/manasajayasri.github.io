@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta data -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--font-family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Rubik:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Font-Awesome-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- title of site -->
+    <title>Manasa • Portfolio</title>
+
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="images/favicon.png" />
+
+    <!--style.css-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+  </head>
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- HEADER -->
+    <header class="header">
+      <h3 class="page-title">
+        <a href="https://manasajayasri.github.io/"> Manasa Jayasri</a>
+      </h3>
+
+      <nav class="main-nav">
+        <!-- SVG Hamburger Menu Icon -->
+        <svg
+          class="menu-toggle"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          onclick="toggleMenu()"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#about">About</a></li>
+          <li><a class="main-nav-link" href="#projects">Projects</a></li>
+          <li><a class="main-nav-link" href="#education">Education</a></li>
+          <li><a class="main-nav-link" href="#experience">Experience</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- MAIN INTRO SECTION -->
+      <div class="main-head">
+        <div class="main-intro">
+          Hi there, I'm a
+          <br />
+          computer science major
+          <br />
+          at University of Wisconsin
+        </div>
+      </div>
+
+      <!-- MAIN INTERESTS SECTION -->
+      <hr class="page-breaker" />
+      <div class="main-interests">
+        <h3 class="interests-title">Interests</h3>
+        <div class="interests-text">
+          <p>System Design, NLP, Web development, Game development, UI/UX</p>
+        </div>
+      </div>
+      <hr class="page-breaker" />
+
+      <!-- MAIN ABOUT SECTION -->
+      <div class="main-about" id="about">
+        <div class="about-img">
+          <img
+            src="images/me.JPEG"
+            alt="Manasa Jayasri"
+            width="500"
+            height="500"
+          />
+        </div>
+        <div class="about-content">
+          <h3 class="about-title">About Me</h3>
+          <div class="about-bio">
+            <p>
+              Hi, I'm Manasa, a software developer passionate about building
+              scalable and user-friendly web applications. My expertise lies in
+              the MERN stack (MongoDB, Express.js, React, Node.js), and I enjoy
+              tackling complex problems and bringing creative solutions to life
+              through clean, efficient code. I also have experience as a UI/UX
+              Engineer, where I worked on crafting intuitive user interfaces and
+              ensuring seamless user experiences.
+            </p>
+            <p>
+              Beyond web development, I’m intrigued by system design and game
+              development, constantly exploring new challenges to enhance my
+              skills and broaden my perspective. Feel free to check out my
+              projects or reach out—I’d love to connect!
+            </p>
+          </div>
+
+          <!-- Used to be resume button, hidden now for privacy -->
+          <div class="resume-section">
+            <a
+              href="https://github.com/manasajayasri"
+              target="_blank"
+              class="resume-button"
+            >
+              Visit My Github
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="page-breaker" />
+
+      <!-- Portfolio Section -->
+      <div class="portfolio-section" id="projects">
+        <h2>Selected Projects</h2>
+        <div class="portfolio-block">
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a
+                href="https://github.com/manasajayasri/Image-Steganography-with-Stego-Analysis"
+              >
+                Image Steganography with Stego Analysis</a
+              >
+            </div>
+            <p><b>Domain: Java/AWT/Steganography</b></p>
+            <p>
+              This project hosts a Java-based image steganography tool designed
+              to securely embed secret messages within digital images. The tool
+              supports various image formats and employs multiple steganography
+              techniques to maintain the integrity and confidentiality of the
+              data.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a href="https://github.com/manasajayasri/Eco-Runner">
+                Ecorunner - Godot</a
+              >
+            </div>
+            <p><b>Domain: Game Dev</b></p>
+            <p>
+              Eco-Runner VR is an immersive virtual reality game where players
+              race through a series of natural environments while collecting
+              eco-friendly items like recycling items and tree saplings to boost
+              score.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a href="https://github.com/manasajayasri/Zip-Trees">
+                Zip-Trees
+              </a>
+            </div>
+            <p><b>Domain: Java/DSA</b></p>
+            <p>
+              This project implements and tests ZIP Trees, a balanced search
+              tree using randomized ranks, focusing on efficient insertion,
+              deletion, and search while comparing performance with AVL Trees.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a href="https://github.com/manasajayasri/BeatSaber-clone-Godot">
+                BeatSaber - Godot</a
+              >
+            </div>
+            <p><b>Domain: Game Dev</b></p>
+            <p>
+              The project includes a version of BeatSaber (Original BeatSaber
+              available on VR only - Meta Quest, PlayStation 5, PlayStation 4,
+              Microsoft Windows). Developed in Godot.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a
+                href="https://github.com/manasajayasri/Marine-Animal-Image-Classification"
+              >
+                Marine Animal Image Classification</a
+              >
+            </div>
+            <p><b>Domain: ML/CNN</b></p>
+            <p>
+              The project includes training multiple CNN architectures and
+              fine-tuning a pre-trained model (VGG16) for classifying images of
+              sea animals.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a href="https://github.com/manasajayasri/Omnifood"> Omnifood</a>
+            </div>
+            <p><b>Domain: Front-end Dev</b></p>
+            <p>
+              A personalized meal delivery service project featuring AI-driven
+              meal plans and flexible subscriptions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="page-breaker" />
+
+      <!-- Education Section -->
+
+      <div class="main-edu" id="education">
+        <h2>Education</h2>
+        <div class="edu-section">
+          <h3 class="gird-item">Master of Science in Computer Science</h3>
+          <div class="education-entry2 gird-item">
+            <p><em>University of Wisconsin, USA</em></p>
+            <p><strong>Jan 2023 - Dec 2024</strong></p>
+            <ul>
+              <li>Specialized in Data Structures, scoring 85%.</li>
+              <li>
+                Served as the Content Manager for the Google Developer Student
+                Club, leading content creation and strategy to enhance community
+                engagement and learning initiatives.
+              </li>
+              <li>Secured an overall GPA: 3.2/4</li>
+            </ul>
+          </div>
+
+          <h3 class="gird-item">Bachelor of Technology in Computer Science</h3>
+          <div class="education-entry1 gird-item">
+            <p>
+              <em
+                >Potti Sriramulu College of Engineering, India (Accredited by
+                JNTU University)
+              </em>
+            </p>
+            <p><strong>June 2018 - June 2022</strong></p>
+            <ul>
+              <li>
+                Achieved an overall GPA of 8/10, graduating with
+                <a
+                  href="https://drive.google.com/file/d/1wfR8t3hGbq_Lr-8wHjbwy2GgEaB0ZMg1/view?usp=sharing"
+                  target="_blank"
+                  >First Class Honors and Distinction.</a
+                >
+              </li>
+              <li>
+                Founded and led a
+                <a
+                  href="https://sites.google.com/view/thebook-nookclub/home"
+                  target="_blank"
+                  >Book Club</a
+                >
+                which successfully engaged over 30 members in various literary
+                discussions, activities, and events. Spearheaded initiatives
+                such as book reviews, and book exhange, fostering a strong sense
+                of community and a shared passion for literature.
+              </li>
+              <li>
+                Published in IEEE International Conference on Integrated
+                Circuits and Communication Systems (ICICACS), Raichur, India. ·
+                Apr 1, 2023.
+                <a
+                  href="https://ieeexplore.ieee.org/document/10100146"
+                  target="_blank"
+                  >Visit</a
+                >
+              </li>
+              <li>
+                In June 2021, I was honored with an Award for Excellence in
+                Education from District 98 of Toastmasters International,
+                recognizing my commitment to educational leadership and
+                excellence.
+              </li>
+              <li>
+                Organized multiple Toastmasters meetings and led as Contest
+                Chair twice.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="page-breaker" />
+
+      <!-- Experience Section -->
+      <div class="main-exp" id="experience">
+        <h2>Experience</h2>
+        <div class="exp-section">
+          <h3 class="gird-item">UI/UX Engineer</h3>
+          <div class="education-entry1 gird-item">
+            <p><em>Ritchie Media · Remote</em></p>
+            <p><strong>Sept 2021 – Sept 2022</strong></p>
+            <ul>
+              <li>
+                Took part in the foundational design efforts for the
+                <a
+                  href="https://www.behance.net/gallery/128959319/Political-Radius-UX-Case-study"
+                  target="_blank"
+                  >Political Radius</a
+                >
+                project, creating low-fidelity wireframes that served as a
+                critical roadmap for both designers and developers, ensuring
+                alignment and clarity in the development process.
+              </li>
+              <li>
+                Delivered user-centric solutions by transforming complex project
+                requirements into visually appealing and functional designs,
+                prioritizing usability and accessibility to cater to a diverse
+                audience.
+              </li>
+              <li>
+                Shaped the visual and functional aspects of the product,
+                enhancing the overall user experience with thoughtful design
+                choices.
+              </li>
+              <li>
+                Played a key role in ensuring the successful launch of the
+                project during my tenure as a UI/UX designer.
+              </li>
+              <li>
+                Contributed to the front-end development team, assisting in
+                designing and implementing user interfaces that align with
+                project goals and enhance user engagement. Utilized JavaScript
+                and Agile practices to improve design efficiency and
+                functionality.
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="gird-item">Web Development Intern</h3>
+          <div class="education-entry1 gird-item">
+            <p><em>TGH Tech · Internship</em></p>
+            <p><strong>Jan 2021 - June 2021</strong></p>
+            <ul>
+              <li>
+                Collaborated with the founder and executive team to drive
+                strategic social media campaigns, resulting in a 30% increase in
+                client engagement across platforms within three months of
+                implementation.
+              </li>
+              <li>
+                Overhauled and enhanced digital content across TGH Tech’s
+                websites, social media, and newsletters, driving engagement and
+                SEO improvements.
+              </li>
+              <li>
+                Collaborated with designers to implement consistent branding and
+                UI elements, creating a cohesive online presence.
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="gird-item">IT Technician</h3>
+          <div class="education-entry1 gird-item">
+            <p><em>UWM · Part-time</em></p>
+            <p><strong>Sept 2023 – Dec 2024</strong></p>
+            <ul>
+              <li>
+                Provided Level 2 technical support to students, faculty, and
+                external users via phone, email, and in-person. Supervised Help
+                Desk operations, ensuring adequate staffing, ticket management,
+                and timely issue resolution. Provided technical mentorship,
+                trained consultants, and managed quality control processes.
+              </li>
+              <li>
+                Supervised collaboration with Help Desk team members to resolve
+                complex technical issues, ensuring effective use of customer
+                management software.
+              </li>
+              <li>
+                Supervised performance evaluations, monitored employee
+                attendance, and addressed scheduling conflicts.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="page-breaker" />
+
+      <div id="social-platforms">
+        <div>
+          <a
+            class="tooltip"
+            href="https://github.com/manasajayasri"
+            data-title="Github"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i><span>Github</span>
+          </a>
+          <a
+            class="tooltip"
+            href="https://www.linkedin.com/in/manasa-jayasri/"
+            data-title="LinkedIn"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+          </a>
+          <a
+            class="tooltip"
+            href="https://dev.to/manasajayasri"
+            data-title="Dev.to"
+            target="_blank"
+          >
+            <i class="fa-brands fa-dev"></i><span>Dev.to</span>
+          </a>
+          <a
+            class="tooltip"
+            href="https://manasajayasri.medium.com/"
+            data-title="Dev.to"
+            target="_blank"
+          >
+            <i class="fa-brands fa-medium"></i><span>Medium</span>
+          </a>
+          <a
+            class="tooltip"
+            href="mailto:tmanasa249@gmail.com"
+            data-title="Email"
+          >
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>Email</span>
+          </a>
+        </div>
+
+        <div class="copyright-section">
+          <p>&copy; 2025 Manasa. Made with ❤️</p>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function toggleMenu() {
+        var nav = document.querySelector(".main-nav-list");
+        nav.classList.toggle("active");
+      }
+
+      let mybutton = document.getElementById("myBtn");
+
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>

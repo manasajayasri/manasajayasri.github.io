@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-D4TMHVJNMD"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-D4TMHVJNMD");
+    </script>
+
+    <!-- meta data -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--font-family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Rubik:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Font-Awesome-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- title of site -->
+    <title>Manasa • Portfolio</title>
+
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="images/favicon.png" />
+
+    <!--style.css-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+  </head>
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- HEADER -->
+    <header class="header">
+      <h3 class="page-title">
+        <a href="https://manasajayasri.github.io/"> Manasa Jayasri</a>
+      </h3>
+
+      <nav class="main-nav">
+        <!-- SVG Hamburger Menu Icon -->
+        <svg
+          class="menu-toggle"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          onclick="toggleMenu()"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#about">About</a></li>
+          <li><a class="main-nav-link" href="#projects">Projects</a></li>
+          <li><a class="main-nav-link" href="#education">Education</a></li>
+          <li><a class="main-nav-link" href="#experience">Experience</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- MAIN INTRO SECTION -->
+      <div class="main-head">
+        <div class="main-intro">
+          Hi there, I'm a
+          <br />
+          computer science major
+          <br />
+          at University of Wisconsin
+        </div>
+      </div>
+
+      <!-- MAIN INTERESTS SECTION -->
+      <hr class="page-breaker" />
+      <div class="main-interests">
+        <h3 class="interests-title">Interests</h3>
+        <div class="interests-text">
+          <p>System Design, Web development, Game development, UI/UX</p>
+        </div>
+      </div>
+      <hr class="page-breaker" />
+
+      <!-- MAIN ABOUT SECTION -->
+      <div class="main-about" id="about">
+        <div class="about-img">
+          <img
+            src="images/me.JPEG"
+            alt="Manasa Jayasri"
+            width="500"
+            height="500"
+          />
+        </div>
+        <div class="about-content">
+          <h3 class="about-title">About Me</h3>
+          <div class="about-bio">
+            <p>
+              Hi, I'm Manasa, a dedicated software developer with a passion for
+              crafting scalable and intuitive web applications. My expertise
+              centers around the MERN stack (MongoDB, Express.js, React,
+              Node.js), where I excel in solving complex problems and
+              implementing creative solutions with clean, effective code.
+              Additionally, I have a strong background in UI/UX design, focusing
+              on creating engaging user interfaces and ensuring smooth user
+              experiences.
+            </p>
+            <p>
+              Apart from web development, I am deeply interested in system
+              design and game development. I continuously seek new challenges
+              that push the boundaries of my skills and expand my technical
+              horizon. Check out my projects or get in touch—I'm always eager to
+              connect and explore new opportunities!
+            </p>
+          </div>
+
+          <!-- Used to be resume button, hidden now for privacy -->
+          <div class="resume-section">
+            <a
+              href="https://github.com/manasajayasri"
+              target="_blank"
+              class="resume-button"
+            >
+              Visit My Github
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="page-breaker" />
+
+      <!-- Portfolio Section -->
+      <div class="portfolio-section" id="projects">
+        <h2>Selected Projects</h2>
+        <div class="portfolio-block">
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a
+                href="https://github.com/manasajayasri/Image-Steganography-with-Stego-Analysis"
+              >
+                Image Steganography with Stego Analysis</a
+              >
+            </div>
+            <p><b>Domain: Java/AWT/Steganography</b></p>
+            <p>
+              This project hosts a Java-based image steganography tool designed
+              to securely embed secret messages within digital images. The tool
+              supports various image formats and employs multiple steganography
+              techniques to maintain the integrity and confidentiality of the
+              data.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a href="https://github.com/manasajayasri/Eco-Runner">
+                Ecorunner - Godot</a
+              >
+            </div>
+            <p><b>Domain: Game Dev</b></p>
+            <p>
+              Eco-Runner VR is an immersive virtual reality game where players
+              race through a series of natural environments while collecting
+              eco-friendly items like recycling items and tree saplings to boost
+              score.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a href="https://github.com/manasajayasri/Zip-Trees">
+                Zip-Trees
+              </a>
+            </div>
+            <p><b>Domain: Java/DSA</b></p>
+            <p>
+              This project implements and tests ZIP Trees, a balanced search
+              tree using randomized ranks, focusing on efficient insertion,
+              deletion, and search while comparing performance with AVL Trees.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a href="https://github.com/manasajayasri/BeatSaber-clone-Godot">
+                BeatSaber - Godot</a
+              >
+            </div>
+            <p><b>Domain: Game Dev</b></p>
+            <p>
+              The project includes a version of BeatSaber (Original BeatSaber
+              available on VR only - Meta Quest, PlayStation 5, PlayStation 4,
+              Microsoft Windows). Developed in Godot.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a
+                href="https://github.com/manasajayasri/Marine-Animal-Image-Classification"
+              >
+                Marine Animal Image Classification</a
+              >
+            </div>
+            <p><b>Domain: ML/CNN</b></p>
+            <p>
+              The project includes training multiple CNN architectures and
+              fine-tuning a pre-trained model (VGG16) for classifying images of
+              sea animals.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a href="https://github.com/manasajayasri/Omnifood"> Omnifood</a>
+            </div>
+            <p><b>Domain: Front-end Dev</b></p>
+            <p>
+              A personalized meal delivery service project featuring AI-driven
+              meal plans and flexible subscriptions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="page-breaker" />
+
+      <!-- Education Section -->
+
+      <div class="main-edu" id="education">
+        <h2>Recent Education</h2>
+        <div class="edu-section">
+          <h3 class="gird-item">Master of Science in Computer Science</h3>
+          <div class="education-entry2 gird-item">
+            <p>
+              <em>University of Wisconsin (CEAS UWM) - Milwaukee, USA</em>
+            </p>
+            <p></p>
+            <ul>
+              <li>Specialized in Data Structures, scoring 85%.</li>
+              <li>
+                Served as the Content Manager for the Google Developer Student
+                Club, leading content creation and strategy to enhance community
+                engagement and learning initiatives.
+              </li>
+              <li>Secured an overall GPA: 3.2/4</li>
+              <li>
+                Coursework: Computer Architecture, OOP, Data Structures &
+                Algorithms, Introduction to Machine Learning, Health Big Data
+                Processing Platforms, Immersive Technology & 3D UI, Requirement
+                Definition and Management.
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="gird-item">Bachelor of Technology in Computer Science</h3>
+          <div class="education-entry1 gird-item">
+            <p>
+              <em
+                >Potti Sriramulu College of Engineering, India (Accredited by
+                JNTU University)
+              </em>
+            </p>
+            <!-- <p><strong>June 2018 - June 2022</strong></p> -->
+            <ul>
+              <li>
+                Achieved an overall GPA of 8/10, graduating with First Class
+                Honors and Distinction.
+              </li>
+              <li>
+                Founded and led a
+                <a
+                  href="https://sites.google.com/view/thebook-nookclub/home"
+                  target="_blank"
+                  >Book Club</a
+                >
+                which successfully engaged over 30 members in various literary
+                discussions, activities, and events. Spearheaded initiatives
+                such as book reviews, and book exhange, fostering a strong sense
+                of community and a shared passion for literature.
+              </li>
+              <li>
+                Published in IEEE International Conference on Integrated
+                Circuits and Communication Systems (ICICACS), Raichur, India. ·
+                Apr 1, 2023.
+                <a
+                  href="https://ieeexplore.ieee.org/document/10100146"
+                  target="_blank"
+                  >Visit</a
+                >
+              </li>
+              <li>
+                Honored with an Award for Excellence in Education from District
+                98 of Toastmasters International, recognizing my commitment to
+                educational leadership and excellence.
+              </li>
+              <li>
+                Organized multiple Toastmasters meetings and led as Contest
+                Chair multiple times.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="page-breaker" />
+
+      <!-- Experience Section -->
+      <div class="main-exp" id="experience">
+        <h2>Experience</h2>
+        <div class="exp-section">
+          <h3 class="gird-item">MERN Stack Developer</h3>
+          <div class="education-entry1 gird-item">
+            <p><em>Ritchie Media · Remote</em></p>
+            <p><strong>Jan 2021 – Nov 2022</strong></p>
+            <ul>
+              <li>
+                Took part in the foundational design efforts for the
+                <a
+                  href="https://www.behance.net/gallery/128959319/Political-Radius-UX-Case-study"
+                  target="_blank"
+                  >Political Radius</a
+                >
+                project, creating low-fidelity wireframes that served as a
+                critical roadmap for both designers and developers, ensuring
+                alignment and clarity in the development process.
+              </li>
+              <li>
+                Enhanced user engagement by 30% through strategic UI/UX
+                redesigns using React, complemented by advanced HTML5 and CSS3
+                techniques.
+              </li>
+              <li>
+                Optimized application functionality and performance by
+                integrating Express.js and Node.js, focusing on scalable backend
+                solutions.
+              </li>
+              <li>
+                Achieved a 20% faster response by using MongoDB and a serverless
+                AWS Lambda architecture, reducing costs and enhancing
+                scalability.
+              </li>
+              <li>
+                Assisted in designing and implementing robust database schemas
+                and RESTful APIs, significantly improving data integrity and
+                system interaction.
+              </li>
+              <li>
+                Collaborated effectively with cross-functional teams to ensure
+                high system reliability throughout the application lifecycle.
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="gird-item">Web Development Intern</h3>
+          <div class="education-entry1 gird-item">
+            <p><em>TGH Tech · Internship</em></p>
+            <p><strong>June 2020 - Nov 2020</strong></p>
+            <ul>
+              <li>
+                Collaborated with the founder and executive team to drive
+                strategic social media campaigns, resulting in a 30% increase in
+                client engagement across platforms within three months of
+                implementation.
+              </li>
+              <li>
+                Overhauled and enhanced digital content across TGH Tech’s
+                websites, social media, and newsletters, driving engagement and
+                SEO improvements.
+              </li>
+              <li>
+                Collaborated with designers to implement consistent branding and
+                UI elements, creating a cohesive online presence.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="page-breaker" />
+
+      <div id="social-platforms">
+        <div>
+          <a
+            class="tooltip"
+            href="https://github.com/manasajayasri"
+            data-title="Github"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i><span>Github</span>
+          </a>
+          <a
+            class="tooltip"
+            href="https://www.linkedin.com/in/manasa-jayasri/"
+            data-title="LinkedIn"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+          </a>
+          <a
+            class="tooltip"
+            href="https://dev.to/manasajayasri"
+            data-title="Dev.to"
+            target="_blank"
+          >
+            <i class="fa-brands fa-dev"></i><span>Dev.to</span>
+          </a>
+          <a
+            class="tooltip"
+            href="https://manasajayasri.medium.com/"
+            data-title="Dev.to"
+            target="_blank"
+          >
+            <i class="fa-brands fa-medium"></i><span>Medium</span>
+          </a>
+          <a
+            class="tooltip"
+            href="mailto:tmanasa249@gmail.com"
+            data-title="Email"
+          >
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>Email</span>
+          </a>
+        </div>
+
+        <div class="copyright-section">
+          <p>&copy; 2025 Manasa. Made with ❤️</p>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function toggleMenu() {
+        var nav = document.querySelector(".main-nav-list");
+        nav.classList.toggle("active");
+      }
+
+      let mybutton = document.getElementById("myBtn");
+
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>

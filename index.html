@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-D4TMHVJNMD"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-D4TMHVJNMD");
+    </script>
+
+    <!-- meta data -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--font-family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Font-Awesome-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- title of site -->
+    <title>Manasa • Portfolio</title>
+
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="images/favicon.png" />
+
+    <!--style.css-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+  </head>
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- HEADER -->
+    <header class="header">
+      <h3 class="page-title">
+        <a href="https://manasajayasri.github.io/"> Manasa Jayasri</a>
+      </h3>
+
+      <nav class="main-nav">
+        <!-- SVG Hamburger Menu Icon -->
+        <svg
+          class="menu-toggle"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          onclick="toggleMenu()"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#about">About</a></li>
+          <li><a class="main-nav-link" href="#projects">Projects</a></li>
+          <li><a class="main-nav-link" href="#education">Education</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- MAIN INTRO SECTION -->
+      <div class="main-head">
+        <div class="main-intro">
+          Hi there, I'm a
+          <br />
+          computer science major
+          <br />
+          at University of Wisconsin
+        </div>
+      </div>
+
+      <!-- MAIN INTERESTS SECTION -->
+      <hr class="page-breaker" />
+      <div class="main-interests">
+        <h3 class="interests-title">Interests</h3>
+        <div class="interests-text">
+          <p>
+            Cloud Computing & DevOps, Full-Stack Development (MERN), QA
+            Automation
+          </p>
+        </div>
+      </div>
+      <hr class="page-breaker" />
+
+      <!-- MAIN ABOUT SECTION -->
+      <div class="main-about" id="about">
+        <div class="about-img">
+          <img
+            src="images/me.JPEG"
+            alt="Manasa Jayasri"
+            width="500"
+            height="500"
+          />
+        </div>
+        <div class="about-content">
+          <h3 class="about-title">About Me</h3>
+          <div class="about-bio">
+            <p>
+              I’m Manasa, a software engineer based in Fremont. I work across QA
+              automation, full-stack development, and cloud, but what drives me
+              is the challenge of creating software that’s both reliable and
+              easy to use. I like to experiment, learn quickly, and bring ideas
+              to life.
+            </p>
+          </div>
+
+          <!-- Used to be resume button, hidden now for privacy -->
+          <div class="resume-section">
+            <a
+              href="https://github.com/manasajayasri"
+              target="_blank"
+              class="resume-button"
+            >
+              Visit My Github
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="page-breaker" />
+
+      <!-- Portfolio Section -->
+      <div class="portfolio-section" id="projects">
+        <h2>Personal Projects</h2>
+        <div class="portfolio-block">
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a
+                href="https://github.com/manasajayasri/Image-Steganography-with-Stego-Analysis"
+              >
+                Image Steganography</a
+              >
+            </div>
+            <p><b>Java | AWT | Steganography</b></p>
+            <p>
+              This project hosts a Java-based image steganography tool designed
+              to securely embed secret messages within digital images. The tool
+              supports various image formats and employs multiple steganography
+              techniques to maintain the integrity and confidentiality of the
+              data.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a href="https://github.com/manasajayasri/Zip-Trees">
+                Zip-Trees
+              </a>
+            </div>
+            <p><b>Java | Algorithms | Randomized DS</b></p>
+            <p>
+              This project implements and tests ZIP Trees, a balanced search
+              tree using randomized ranks, focusing on efficient insertion,
+              deletion, and search while comparing performance with AVL Trees.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <i class="fa-brands fa-dev"></i>
+              <a
+                href="https://dev.to/manasajayasri/behind-the-scenes-designing-a-beat-saber-style-game-with-godot-184j"
+              >
+                BeatSaber - Godot</a
+              >
+            </div>
+            <p><b>VR | Python | C#</b></p>
+            <p>
+              The project includes a version of BeatSaber (Original BeatSaber
+              available on VR only - Meta Quest, PlayStation 5, PlayStation 4,
+              Microsoft Windows). Developed in Godot.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a
+                href="https://github.com/manasajayasri/Marine-Animal-Image-Classification"
+              >
+                Marine Animal Image Classification</a
+              >
+            </div>
+            <p><b>ML | CNN</b></p>
+            <p>
+              The project includes training multiple CNN architectures and
+              fine-tuning a pre-trained model (VGG16) for classifying images of
+              sea animals.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a href="https://github.com/manasajayasri/social-media-analytics">
+                Social Media Analytics</a
+              >
+            </div>
+            <p><b>Python | Front-end | REST APIs</b></p>
+            <p>
+              I developed a Social Media Analytics Dashboard with Flask that
+              visualizes performance metrics for YouTube and X (Twitter) by
+              integrating their REST APIs. The dashboard highlights subscriber
+              and follower growth, top-performing videos and tweets.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="page-breaker" />
+
+      <!-- Education Section -->
+
+      <div class="main-edu" id="education">
+        <h2>Recent Education</h2>
+        <div class="edu-section">
+          <h3 class="gird-item">Master of Science in Computer Science</h3>
+          <div class="education-entry2 gird-item">
+            <p>
+              <em>University of Wisconsin - Milwaukee, USA</em>
+            </p>
+            <p><strong>January 2023 - December 2024</strong></p>
+            <p></p>
+            <ul>
+              <li>
+                Served as the Content Manager for the Google Developer Student
+                Club, leading content creation and strategy to enhance community
+                engagement and learning initiatives.
+              </li>
+              <li>Secured an overall Grade - A</li>
+              <li>
+                Coursework: Computer Architecture, OOP, Data Structures &
+                Algorithms, Introduction to Machine Learning, Health Big Data
+                Processing Platforms, Immersive Technology & 3D UI, Requirement
+                Definition and Management.
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="gird-item">Bachelor of Technology in Computer Science</h3>
+          <div class="education-entry1 gird-item">
+            <p>
+              <em>JNTUK University, Kakinada, India </em>
+            </p>
+            <p><strong>June 2018 - June 2022</strong></p>
+            <ul>
+              <li>Graduated with First Class Honors and Distinction.</li>
+              <li>
+                Founded and led a
+                <a
+                  href="https://sites.google.com/view/thebook-nookclub/home"
+                  target="_blank"
+                  >Book Club</a
+                >
+                which successfully engaged over 30 members in various literary
+                discussions, activities, and events. Spearheaded initiatives
+                such as book reviews, and book exhange, fostering a strong sense
+                of community and a shared passion for literature.
+              </li>
+              <li>
+                Published in IEEE International Conference on Integrated
+                Circuits and Communication Systems (ICICACS), Raichur, India. ·
+                Apr 1, 2023.
+                <a
+                  href="https://ieeexplore.ieee.org/document/10100146"
+                  target="_blank"
+                  >Visit</a
+                >
+              </li>
+              <li>
+                Honored with an Award for Excellence in Education from District
+                98 of Toastmasters International, recognizing my commitment to
+                educational leadership and excellence.
+              </li>
+              <li>
+                Organized multiple Toastmasters meetings and led as Contest
+                Chair multiple times.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="page-breaker" />
+
+      <div id="social-platforms">
+        <div>
+          <a
+            class="tooltip"
+            href="https://github.com/manasajayasri"
+            data-title="Github"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i><span>Github</span>
+          </a>
+          <a
+            class="tooltip"
+            href="https://www.linkedin.com/in/manasa-jayasri/"
+            data-title="LinkedIn"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+          </a>
+          <a
+            class="tooltip"
+            href="https://dev.to/manasajayasri"
+            data-title="Dev.to"
+            target="_blank"
+          >
+            <i class="fa-brands fa-dev"></i><span>Dev.to</span>
+          </a>
+
+          <a
+            class="tooltip"
+            href="mailto:tmanasa249@gmail.com"
+            data-title="Email"
+          >
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>Email</span>
+          </a>
+        </div>
+
+        <div class="copyright-section">
+          <p>&copy; 2025 Manasa. Made with ❤️</p>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function toggleMenu() {
+        var nav = document.querySelector(".main-nav-list");
+        nav.classList.toggle("active");
+      }
+
+      let mybutton = document.getElementById("myBtn");
+
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>

@@ -14,35 +14,54 @@
 
   .menu-toggle {
     display: block;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1002;
+    cursor: pointer;
   }
 
   .main-nav {
-    position: relative;
+    position: static;
   }
+  /* background-color: #f3e4ce; */
 
   .main-nav-list {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    display: none;
-    /* background-color: #f3e4ce; */
-    background-color: #fff;
+    position: fixed;
+    inset: 0; /* top:0 right:0 bottom:0 left:0 */
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    /* background: rgba(255, 255, 255, 0.96);  */
+    background: #fff;
+    backdrop-filter: blur(2px);
+    z-index: 1001;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
   }
 
   .main-nav-list.active {
-    display: flex;
-    align-items: flex-end;
-    padding: 1em;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .main-nav-link {
+    width: auto;
+    border: 0;
+    padding: 10px 0;
     text-align: center;
-    padding: 10px;
-    width: 100%;
-    border-bottom: 1px solid #ccc;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+
+  body.nav-open {
+    overflow: hidden;
   }
 
   .main-nav-link:last-child {
@@ -137,19 +156,29 @@
     font-size: 1.6em;
     margin-bottom: 2em;
   }
-
+  /* EDU MOBILE VIEW */
+  .main-edu {
+    padding: 2.5em 1.25em;
+  }
   .edu-section {
     grid-template-columns: 1fr;
+    gap: 18px;
     justify-content: start;
   }
 
   .gird-item {
-    padding: 5px;
+    padding: 6px 0;
     width: 100%;
+    text-align: left;
+    font-size: 1.05em;
   }
 
-  .main-edu {
-    padding: 2em;
+  .gird-item ul {
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    line-height: 1.2em;
+    text-align: left;
   }
 }
 
@@ -175,6 +204,13 @@
   .edu-section {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+  .gird-item ul {
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    line-height: 1.2em;
+    text-align: left;
   }
 }
 
@@ -240,8 +276,8 @@
   }
 
   .edu-section {
-    grid-template-columns: 1fr;
-    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 
   .gird-item {
@@ -256,5 +292,37 @@
   .main-exp {
     margin-top: 5em;
     padding: 1em;
+  }
+}
+
+/* BLOGSsSS */
+
+@media (max-width: 1100px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 520px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SKILLS */
+
+@media (max-width: 640px) {
+  .skills-groups {
+    gap: 2em;
+  }
+  .skills-subtitle {
+    text-align: center;
+  }
+  .skills-grid {
+    justify-content: center;
   }
 }

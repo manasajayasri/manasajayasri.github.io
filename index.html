@@ -36,6 +36,12 @@
       rel="stylesheet"
     />
 
+    <!-- coreui icons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons/css/all.min.css"
+    />
+
     <!-- title of site -->
     <title>Manasa • Portfolio</title>
 
@@ -53,7 +59,7 @@
     <!-- HEADER -->
     <header class="header">
       <h3 class="page-title">
-        <a href="https://manasajayasri.github.io/"> Manasa Jayasri</a>
+        <a href="#"> Manasa Jayasri</a>
       </h3>
 
       <nav class="main-nav">
@@ -77,8 +83,10 @@
         </svg>
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="#about">About</a></li>
+          <li><a class="main-nav-link" href="#skills">Skills</a></li>
           <li><a class="main-nav-link" href="#projects">Projects</a></li>
           <li><a class="main-nav-link" href="#education">Education</a></li>
+          <li><a class="main-nav-link" href="#blog">Blogs</a></li>
         </ul>
       </nav>
     </header>
@@ -100,10 +108,7 @@
       <div class="main-interests">
         <h3 class="interests-title">Interests</h3>
         <div class="interests-text">
-          <p>
-            Cloud Computing & DevOps, Full-Stack Development (MERN), QA
-            Automation
-          </p>
+          <p>MERN-Stack Development, QA Automation, Cloud Computing & DevOps</p>
         </div>
       </div>
       <hr class="page-breaker" />
@@ -122,11 +127,10 @@
           <h3 class="about-title">About Me</h3>
           <div class="about-bio">
             <p>
-              I’m Manasa, a software engineer based in Fremont. I work across QA
-              automation, full-stack development, and cloud, but what drives me
-              is the challenge of creating software that’s both reliable and
-              easy to use. I like to experiment, learn quickly, and bring ideas
-              to life.
+              I’m Manasa, a software engineer based in Fremont, CA. I love to
+              build and test interactive platforms and also write about them. I
+              work across QA automation, full-stack development, and cloud. I
+              like to experiment, learn quickly, and bring ideas to life.
             </p>
           </div>
 
@@ -142,6 +146,37 @@
           </div>
         </div>
       </div>
+      <hr class="page-breaker" />
+
+      <!-- SKILLS -->
+      <section id="skills" class="skills-wrap">
+        <h2 class="skills-title">Skills</h2>
+        <ul class="skills-grid">
+          <li class="skill-pill"><i class="fa-brands fa-java"></i> Java</li>
+          <li class="skill-pill"><i class="fa-brands fa-python"></i> Python</li>
+          <li class="skill-pill">C#</li>
+          <li class="skill-pill"><i class="fa-solid fa-database"></i> SQL</li>
+
+          <li class="skill-pill">Selenium</li>
+
+          <li class="skill-pill">Pytest</li>
+          <li class="skill-pill">
+            <i class="fa-brands fa-tailwindcss"></i> Tailwind CSS
+          </li>
+
+          <li class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript</li>
+          <li class="skill-pill"><i class="fa-brands fa-react"></i> React</li>
+          <li class="skill-pill">
+            <i class="fa-brands fa-node-js"></i> Node.js
+          </li>
+          <li class="skill-pill"><i class="fa-brands fa-docker"></i> Docker</li>
+
+          <li class="skill-pill"><i class="cib-mongodb"></i> MongoDB</li>
+          <li class="skill-pill"><i class="fa-brands fa-aws"></i> AWS</li>
+          <li class="skill-pill"><i class="fa-brands fa-github"></i> GitHub</li>
+        </ul>
+      </section>
+
       <hr class="page-breaker" />
 
       <!-- Portfolio Section -->
@@ -171,6 +206,7 @@
               data.
             </p>
           </div>
+
           <div class="portfolio-item">
             <div class="portfolio-overlay">
               <img
@@ -192,6 +228,25 @@
           </div>
           <div class="portfolio-item">
             <div class="portfolio-overlay">
+              <img
+                src="images/github-mark.png"
+                alt="GitHub link"
+                width="15"
+                height="15"
+              />
+              <a href="https://github.com/manasajayasri/XFLIX-master">
+                XFlix Automation</a
+              >
+            </div>
+            <p><b>Selenium | Java | XPath</b></p>
+            <p>
+              Automated tests on XFlix to verify URLs, retrieve details of
+              uploaded videos, verify video upload functionality, and check data
+              persistence.
+            </p>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-overlay">
               <i class="fa-brands fa-dev"></i>
               <a
                 href="https://dev.to/manasajayasri/behind-the-scenes-designing-a-beat-saber-style-game-with-godot-184j"
@@ -206,6 +261,7 @@
               Microsoft Windows). Developed in Godot.
             </p>
           </div>
+
           <div class="portfolio-item">
             <div class="portfolio-overlay">
               <img
@@ -323,6 +379,80 @@
           </div>
         </div>
       </div>
+
+      <hr class="page-breaker" />
+
+      <!-- ===== Blog (Editorial Grid) ===== -->
+      <section id="blog" class="blog-wrap">
+        <header class="blog-head">
+          <h2 class="blog-title">Blogs</h2>
+          <p class="blog-dek">
+            Short notes on projects, observations, and my prespectives.
+          </p>
+        </header>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <a class="blog-link" href="Defense-of-Boring-Tech.html">
+              <h3 class="blog-hed">In Defense of Boring Tech.</h3>
+              <p class="blog-dek-s">
+                Sometimes “boring” frameworks and tools are the most reliable,
+                scalable, and fun in the long run.
+              </p>
+              <div class="blog-meta">
+                <time datetime="2025-06-30">Jun 30, 2025</time><span>•</span
+                ><span>Scaling Lessons</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-link" href=" Building-with-Socketio.html">
+              <h3 class="blog-hed">Building with Node.js and Socket.IO</h3>
+              <p class="blog-dek-s">
+                Build interactive, live experiences without wrestling with
+                low-level networking details.
+              </p>
+              <div class="blog-meta">
+                <time datetime="2025-08-2">Aug 2, 2025</time><span>•</span
+                ><span>Real-Time Systems</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-link" href="the-focus-fix.html">
+              <h3 class="blog-hed">The focus fix</h3>
+              <p class="blog-dek-s">
+                The productivity strategy built for our dopamine-short circuits.
+              </p>
+              <div class="blog-meta">
+                <time datetime="2025-08-25">Aug 25, 2025</time><span>•</span
+                ><span>Productivity</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="blog-card">
+            <a
+              class="blog-link"
+              href="https://dev.to/manasajayasri/unity-vs-godot-a-game-developers-guide-2a6o"
+              target="_blank"
+            >
+              <h3 class="blog-hed">Unity vs. Godot</h3>
+              <p class="blog-dek-s">
+                A beginner's guide to game development, tools, and choosing the
+                right engine for your projects.
+              </p>
+              <div class="blog-meta">
+                <time datetime="2025-07-28">Oct 16, 2024</time><span>•</span
+                ><span>Game Dev</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
       <hr class="page-breaker" />
 
       <div id="social-platforms">
@@ -370,8 +500,23 @@
 
     <script>
       function toggleMenu() {
-        var nav = document.querySelector(".main-nav-list");
+        const nav = document.querySelector(".main-nav-list");
+        const btn = document.querySelector(".menu-toggle");
+
         nav.classList.toggle("active");
+        document.body.classList.toggle("nav-open");
+
+        if (btn) {
+          btn.setAttribute("aria-expanded", nav.classList.contains("active"));
+        }
+      }
+
+      if (topBtn) {
+        if (nav.classList.contains("active")) {
+          topBtn.style.display = "none";
+        } else {
+          topBtn.style.display = "block";
+        }
       }
 
       let mybutton = document.getElementById("myBtn");

@@ -215,24 +215,46 @@
       <p>&copy; 2025 Manasa. Made with ❤️</p>
     </div>
 
-    <script>
-      function toggleMenu() {
-        const nav = document.querySelector(".main-nav-list");
-        const btn = document.querySelector(".menu-toggle");
-        nav.classList.toggle("active");
-        document.body.classList.toggle("nav-open");
-        if (btn)
-          btn.setAttribute("aria-expanded", nav.classList.contains("active"));
-      }
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector(".main-nav-list");
+    const btn = document.querySelector(".menu-toggle");
+    const topBtn = document.getElementById("myBtn");
 
-      document.querySelectorAll(".main-nav-list a").forEach((a) => {
-        a.addEventListener("click", () => {
-          document.querySelector(".main-nav-list").classList.remove("active");
-          document.body.classList.remove("nav-open");
-          const btn = document.querySelector(".menu-toggle");
-          if (btn) btn.setAttribute("aria-expanded", "false");
-        });
-      });
-    </script>
+    nav.classList.toggle("active");
+    document.body.classList.toggle("nav-open");
+    if (btn) btn.setAttribute("aria-expanded", nav.classList.contains("active"));
+
+    if (topBtn) topBtn.style.display = nav.classList.contains("active") ? "none" : "";
+  }
+
+  document.querySelectorAll(".main-nav-list a").forEach(a => {
+    a.addEventListener("click", () => {
+      const nav = document.querySelector(".main-nav-list");
+      const btn = document.querySelector(".menu-toggle");
+      const topBtn = document.getElementById("myBtn");
+      nav.classList.remove("active");
+      document.body.classList.remove("nav-open");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+      if (topBtn) topBtn.style.display = ""; // hand back to scrollFunction
+    });
+  });
+
+  const mybutton = document.getElementById("myBtn");
+  window.onscroll = function () { scrollFunction(); };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
   </body>
 </html>

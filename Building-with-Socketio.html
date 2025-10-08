@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta data -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Building with Node.js and Socket.IO • Manasa Jayasri</title>
+
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="images/favicon.png" />
+
+    <!--font-family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="css/post.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+  </head>
+  <body>
+    <!-- Masthead -->
+    <header class="masthead">
+      <h3 class="page-title">
+        <a href="index.html"> Manasa Jayasri</a>
+      </h3>
+
+      <button
+        class="menu-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        onclick="toggleMenu()"
+      >
+        ☰
+      </button>
+
+      <ul class="main-nav-list">
+        <li><a class="main-nav-link" href="index.html#about">About</a></li>
+        <li><a class="main-nav-link" href="index.html#skills">Skills</a></li>
+
+        <li>
+          <a class="main-nav-link" href="index.html#projects">Projects</a>
+        </li>
+        <li>
+          <a class="main-nav-link" href="index.html#education">Education</a>
+        </li>
+        <li><a class="main-nav-link" href="index.html#blog">Blogs</a></li>
+      </ul>
+    </header>
+
+    <!-- Article header -->
+    <article class="post">
+      <header class="post-head">
+        <p class="eyebrow">Blog</p>
+
+        <h1 class="title">
+          Building Real-Time Features with Node.js and Socket.IO
+        </h1>
+        <p class="dek">
+          Build interactive, live experiences without wrestling with low-level
+          networking details.
+        </p>
+        <div class="meta">
+          <time datetime="2025-08-30">Aug 02, 2025</time> • Manasa Jayasri
+        </div>
+      </header>
+      <br />
+      <br /><br />
+      <br />
+
+      <!-- Hero image (optional)
+      <figure class="figure img-bleed">
+        <img src="./images/p1_i2.JPEG" alt="Monochrome hero placeholder" />
+      </figure> -->
+
+      <!-- Body -->
+      <section class="body">
+        <p class="lead">
+          Before the internet, communication looked like this: you’d write a
+          letter, drop it in the mailbox, and wait days for a reply. Early
+          websites weren’t that different. You sent a request, waited for the
+          server, and refreshed to see what changed. The web used to be that
+          simple. But today, users expect instant updates. Be it chat messages
+          that appear in real-time, live notifications, dashboards that update
+          without hitting refresh.
+        </p>
+
+        <p>
+          Then came AJAX in the early 2000s, and suddenly pages could fetch bits
+          of data without reloading. That opened the door for features like live
+          search suggestions and background updates.
+        </p>
+        <p>
+          But as users demanded more live chat, multiplayer games, collaborative
+          tools, developers started to hack together “real-time” with long
+          polling and other tricks. These worked, but they were clunky,
+          unreliable, and hard to scale.
+        </p>
+        <p>
+          <strong> Enter WebSockets</strong>: a protocol that let browsers and
+          servers keep a persistent two-way connection. Real-time communication
+          was finally possible. And on top of WebSockets, libraries like
+          Socket.IO emerged to smooth over the rough edges, handling fallbacks,
+          reconnections, and cross-browser quirks so you could just focus on
+          building.
+        </p>
+
+        <!-- Inline image -->
+        <figure class="figure">
+          <img src="./images//socketio/p1_i1.png" alt="Wireframe placeholder" />
+        </figure>
+
+        <h2>What is Socket.IO?</h2>
+
+        <p>
+          Socket.IO is a JavaScript library that enables real-time,
+          bidirectional communication between clients (usually browsers) and
+          servers. It’s built on top of WebSockets but adds important features
+          like:
+        </p>
+        <ul class="bullet">
+          <li>Automatic reconnection</li>
+
+          <li>Event-based communication (you can define custom events)</li>
+
+          <li>Support for rooms and namespaces</li>
+
+          <li>Fallbacks when WebSockets aren’t available</li>
+        </ul>
+        <p>
+          With Node.js on the backend and Socket.IO handling connections, you
+          can build highly interactive applications with just a few lines of
+          code.
+        </p>
+
+        <h2>Setting Up the Project</h2>
+        <p>First, let’s scaffold a Node.js app with Express and Socket.IO.</p>
+
+        <!-- Inline image -->
+        <figure class="figure">
+          <img src="./images/socketio/p1_i2.png" alt="Wireframe placeholder" />
+        </figure>
+
+        <p>server.js:</p>
+        <pre><code class="language-js">
+const express = require('express');
+const http = require('http');
+const { Server } = require('socket.io');
+
+const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
+
+io.on('connection', (socket) => {
+  console.log('A user connected');
+
+  socket.on('disconnect', () => {
+    console.log('A user disconnected');
+  });
+});
+
+server.listen(3000, () => {
+  console.log('http://localhost:3000');
+});
+
+</code></pre>
+
+        <p>index.html:</p>
+        <pre><code class="language-html">
+&lt;ul id="messages"&gt;&lt;/ul&gt;
+&lt;form id="form"&gt;
+  &lt;input id="input" autocomplete="off" /&gt;&lt;button&gt;Send&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;script src="/socket.io/socket.io.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  const socket = io();
+  const form = document.getElementById('form');
+  const input = document.getElementById('input');
+  const messages = document.getElementById('messages');
+
+  form.addEventListener('submit', (e) =&gt; {
+    e.preventDefault();
+    if (input.value) {
+      socket.emit('chat message', input.value);
+      input.value = '';
+    }
+  });
+
+  socket.on('chat message', (msg) =&gt; {
+    const li = document.createElement('li');
+    li.textContent = msg;
+    messages.appendChild(li);
+  });
+&lt;/script&gt;
+
+
+</code></pre>
+
+        <h2>Broadcast Messages</h2>
+        <p>
+          Alright, let’s make every message visible to all connected clients
+        </p>
+        <p>
+          Now update the server, replace the original io.on('connection', …)
+          block (where you only logged A user connected) with this new one that
+          listens for chat messages and broadcasts them to everyone:
+        </p>
+
+        <pre><code class="language-js">
+  io.on('connection', (socket) => {
+  console.log('A user connected');
+
+  socket.on('chat message', (msg) => {
+    // Broadcast to ALL connected clients
+    io.emit('chat message', msg);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('A user disconnected');
+  });
+});
+
+        </code></pre>
+
+        <p>Here's a demo of what we just built:</p>
+
+        <figure class="figure">
+          <video class="demo-video" autoplay muted loop controls>
+            <source src="images/socketio/p1_v1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>
+            A quick demo of the real-time chat running locally.
+          </figcaption>
+        </figure>
+
+        <p>
+          Run the server with node server.js, open two browser tabs, and type.
+          Each message appears instantly in both tabs. That’s broadcasting in
+          action.
+        </p>
+
+        <h2>Moving Into Rooms</h2>
+
+        <p>
+          Broadcasting to everyone is fun, but real apps use rooms. Taking this
+          up a notch, let's create a separate channels where only some users see
+          messages. Think #general, #random, or private groups.
+        </p>
+        <p>How It Works Behind the Scenes</p>
+        <ul>
+          <li>
+            When a new socket (user) connects, they’re connected to the server,
+            but not in any room yet.
+          </li>
+          <li>
+            If they emit a join-room event with a room name e.g., general, the
+            server adds their socket to that room.
+          </li>
+          <li>
+            Now, when they or anyone else sends a room-message to general, the
+            server only delivers that message to sockets inside general.
+          </li>
+          <li>
+            Other users in different rooms won’t see it — the communication is
+            isolated.
+          </li>
+        </ul>
+
+        <p>
+          Click
+          <a href="https://github.com/manasajayasri/socket.io-demo">here</a> for
+          source code.
+        </p>
+
+        <figure class="figure">
+          <video class="demo-video" autoplay muted loop controls>
+            <source src="images/socketio/p1_v2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Demo of rooms for targeted communication</figcaption>
+        </figure>
+
+        <p>
+          Although we just built a chat with rooms, Socket.IO is much more
+          versatile. Any situation where you need instant, event-driven updates
+          is a good fit. Some examples:
+        </p>
+
+        <li>
+          <strong> Applications:</strong> From group messaging (Slack, WhatsApp
+          Web, Discord) to 1-to-1 private chats, Socket.IO makes messages appear
+          instantly without reloading.
+        </li>
+
+        <li>
+          <strong>Live Notifications:</strong> Think of social media alerts: a
+          new like, a comment, or someone joining your meeting. With Socket.IO,
+          the server pushes updates as they happen.
+        </li>
+
+        <li>
+          <strong>Collaboration Tools:</strong> Apps like Google Docs rely on
+          real-time editing. Multiple people typing in the same document? That’s
+          a combination of rooms (each document is a room) and instant event
+          syncing.
+        </li>
+
+        <li>
+          <strong> Dashboards:</strong> Imagine a stock market ticker, a live
+          sports scoreboard, or IoT device data streaming in. Socket.IO lets you
+          push updates straight to dashboards the moment they change.
+        </li>
+
+        <li>
+          <strong> Online Games:</strong> Multiplayer games need fast,
+          synchronized communication. Socket.IO helps players see each other’s
+          moves in real time, often with each game lobby as its own room.
+        </li>
+
+        <li>
+          <strong> Support Systems:</strong> Real-time chat between users and
+          support agents, with rooms separating different conversations.
+        </li>
+
+        <p>
+          We started with a simple broadcast system, then introduced rooms to
+          create multiple channels. This is the foundation of nearly every
+          interactive app you use today.
+        </p>
+
+        <p>
+          What makes Socket.IO powerful is not just real-time messaging, but the
+          flexibility: you can group users, separate features, and scale to
+          handle thousands of concurrent connections.
+        </p>
+      </section>
+    </article>
+
+    <!-- Prev / Next -->
+    <nav class="pager" aria-label="Post navigation">
+      <a class="prev" href="Defense-of-Boring-Tech.html"
+        >← In Defense of Boring Tech.</a
+      >
+      <a class="next" href="the-focus-fix.html">The focus fix →</a>
+    </nav>
+
+    <div class="copyright-section">
+      <p>&copy; 2025 Manasa. Made with ❤️</p>
+    </div>
+
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector(".main-nav-list");
+    const btn = document.querySelector(".menu-toggle");
+    const topBtn = document.getElementById("myBtn");
+
+    nav.classList.toggle("active");
+    document.body.classList.toggle("nav-open");
+    if (btn) btn.setAttribute("aria-expanded", nav.classList.contains("active"));
+
+    if (topBtn) topBtn.style.display = nav.classList.contains("active") ? "none" : "";
+  }
+
+  document.querySelectorAll(".main-nav-list a").forEach(a => {
+    a.addEventListener("click", () => {
+      const nav = document.querySelector(".main-nav-list");
+      const btn = document.querySelector(".menu-toggle");
+      const topBtn = document.getElementById("myBtn");
+      nav.classList.remove("active");
+      document.body.classList.remove("nav-open");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+      if (topBtn) topBtn.style.display = ""; // hand back to scrollFunction
+    });
+  });
+
+  const mybutton = document.getElementById("myBtn");
+  window.onscroll = function () { scrollFunction(); };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+  </body>
+</html>
